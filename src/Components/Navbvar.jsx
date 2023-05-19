@@ -24,7 +24,7 @@ const Navbvar = () => {
             </Link>
             <Nav.Link href="#mentors">Mentors</Nav.Link>
             <Nav.Link href="#action2">Coding </Nav.Link>
-            <Nav.Link href="#action2"> Jobs </Nav.Link>
+            <Nav.Link href="/jobs"> Jobs </Nav.Link>
             <Nav.Link href="#action2">Meet-Ups </Nav.Link>
 
             <NavDropdown title="More" id="navbarScrollingDropdown">
