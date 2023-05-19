@@ -9,6 +9,8 @@ import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import Jobs from "./Pages/Jobs";
 import ProtectedRoute from "./utils/ProtectedRoutes";
+import GeneralForum from "./Pages/GeneralForum";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,6 +23,8 @@ const router = createBrowserRouter([
             <Jobs />
           </ProtectedRoute>
         ),
+        path: "/",
+        element: <GeneralForum />,
       },
       {
         path: "/signup",
@@ -29,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/forum/general",
+        element: <GeneralForum />,
       },
     ],
   },
