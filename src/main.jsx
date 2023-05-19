@@ -17,14 +17,16 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "",
+        path: "/",
+        element: <GeneralForum />,
+      },
+      {
+        path: "/jobs",
         element: (
           <ProtectedRoute>
             <Jobs />
           </ProtectedRoute>
         ),
-        path: "/",
-        element: <GeneralForum />,
       },
       {
         path: "/signup",
