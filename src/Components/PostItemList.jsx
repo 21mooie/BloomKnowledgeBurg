@@ -3,6 +3,11 @@ import "./PostItemList.css";
 import { Link } from "react-router-dom";
 import { Badge } from "react-bootstrap";
 import { FaBeer } from "react-icons/fa";
+import { BsFacebook } from "react-icons/bs";
+import { SlLike, SlDislike } from "react-icons/sl";
+import { BiMessageRounded } from "react-icons/bi";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { BsLinkedin } from "react-icons/bs";
 
 const titleCase = (string) => {
   var sentence = string.toLowerCase().split(" ");
@@ -17,7 +22,7 @@ const PostItemList = ({ currentRecords }) => {
     <>
       {currentRecords &&
         currentRecords.map((r) => (
-          <Card id="ind-card-post-item">
+          <Card id="ind-card-post-item ">
             <div id="left-card">
               <Link id="card-title-list-item" to={`/post/${r.id}`}>
                 {r.sticky_top && (
@@ -42,6 +47,32 @@ const PostItemList = ({ currentRecords }) => {
                 created at: {r.create_time} | Last Reply: {r.last_reply} 9 hours
                 ago <FaBeer />
               </p>
+            </div>
+
+            <div className=" likes">
+              <div className="d-flex gap-2">
+                <Link>
+                  <BsFacebook className="icon"/>
+                </Link>
+                <Link>
+                  <AiFillTwitterCircle className="icon"/>
+                </Link>
+
+                <Link>
+                  <BsLinkedin className="icon"/>
+                </Link>
+              </div>
+              <div className="d-flex gap-2">
+                <Link className="text-muted ">
+                  <SlLike className=" pl-2" />
+                </Link>
+                <Link>
+                  <SlDislike className="text-muted" />
+                </Link>
+                <Link>
+                  <BiMessageRounded className="text-muted" />
+                </Link>
+              </div>
             </div>
           </Card>
         ))}
