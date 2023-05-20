@@ -1,5 +1,5 @@
 .size {
-    height: 50px;
+    height: 70px;
 }
 
 .nav {
@@ -9,8 +9,13 @@
 
 .link {
     text-decoration: none;
+    width: 150px;
 }
 
 .form {
     width: 250px;
+}
+
+.hamburger {
+    width: 150px;
 }

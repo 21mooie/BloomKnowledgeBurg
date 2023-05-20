@@ -29,38 +29,36 @@ const Navbvar = () => {
             {" "}
             <img src={logo} alt="" className="size"/>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="mt-3"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
-            >
-              <Link to={`/`} className="link">
-                <Nav.Link href="#general">Home</Nav.Link>
-              </Link>
+          <Nav
+            className="mt-3 d-flex"
+            style={{ maxHeight: "100px"}}
+            navbarScroll
+          >
+            <Link to={`/`} className="link">
+              <Nav.Link href="#general" className="fs-5">Home</Nav.Link>
+            </Link>
 
-              <Link to={`/jobs`} className="link">
-                <Nav.Link href="#general">Jobs</Nav.Link>
-              </Link>
-              <Link to={`/`} className="link">
-                <Nav.Link href="#mentors">Mentorship</Nav.Link>
-              </Link>
-              <Link to={`/`} className="link">
-                <Nav.Link href="#action2"> Resources </Nav.Link>
-              </Link>
-              <Link to={`/`} className="link">
-                <Nav.Link href="#action2">Meet-Ups </Nav.Link>
-              </Link>
+            <Link to={`/jobs`} className="link">
+              <Nav.Link href="#general" className="fs-5">Jobs</Nav.Link>
+            </Link>
+            <Link to={`/`} className="link">
+              <Nav.Link href="#mentors" className="fs-5">Mentorship</Nav.Link>
+            </Link>
+            <Link to={`/`} className="link">
+              <Nav.Link href="#action2" className="fs-5"> Resources </Nav.Link>
+            </Link>
+            <Link to={`/`} className="link">
+              <Nav.Link href="#action2" className="fs-5">Meet-Ups </Nav.Link>
+            </Link>
 
-              <NavDropdown title="More" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Help</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Contact Us</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">About</NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
+            
+          </Nav>
+          <NavDropdown title="More" id="navbarScrollingDropdown" className="hamburger">
+              <NavDropdown.Item href="#action3">Help</NavDropdown.Item>
+              <NavDropdown.Item href="#action4">Contact Us</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action5">About</NavDropdown.Item>
+            </NavDropdown>
         </Container>
       </Navbar>
     </div>
