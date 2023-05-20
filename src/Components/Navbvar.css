@@ -1,0 +1,16 @@
+.size {
+    height: 50px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.form {
+    width: 250px;
+}
