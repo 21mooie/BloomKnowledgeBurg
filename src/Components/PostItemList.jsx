@@ -24,7 +24,7 @@ const PostItemList = ({ currentRecords }) => {
         currentRecords.map((r) => (
           <Card id="ind-card-post-item ">
             <div id="left-card">
-              <Link id="card-title-list-item">
+              <Link id="card-title-list-item" to={`/post/${r.id}`}>
                 {r.sticky_top && (
                   <svg viewBox="0 0 10 16" width="1em" height="1em">
                     <path

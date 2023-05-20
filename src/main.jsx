@@ -11,7 +11,11 @@ import Jobs from "./Pages/Jobs";
 import ProtectedRoute from "./utils/ProtectedRoutes";
 import GeneralForum from "./Pages/GeneralForum";
 import PostCreate from "./Pages/PostCreate";
+
 import Home from "./Pages/Home";
+
+import PostDetail from "./Pages/PostDetail";
+
 
 const router = createBrowserRouter([
   {
@@ -53,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "/post/create",
         element: <PostCreate />,
+      },
+      {
+        path: "/post/:id",
+        element: <PostDetail />,
       },
     ],
   },
