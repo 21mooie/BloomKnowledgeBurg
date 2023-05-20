@@ -7,55 +7,66 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import search from "../assets/search.png";
+import "./Navbvar.css";
 
 const Navbvar = () => {
   return (
-    <Navbar bg="light" expand="lg">
-      <Container fluid>
-        <Navbar.Brand href="#">
-          {" "}
-          <img src={logo} alt="" />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px" }}
-            navbarScroll
-          >
-            <Link to={`/`}>
-              <Nav.Link>Home</Nav.Link>
-            </Link>
-
-            <Link to={`/forum/general`}>
-              <Nav.Link href="#general">Posts</Nav.Link>
-            </Link>
-            <Nav.Link href="#mentors">Mentors</Nav.Link>
-            <Nav.Link href="#action2">Coding </Nav.Link>
-            <Nav.Link href="/jobs"> Jobs </Nav.Link>
-
-            <Nav.Link href="#action2"> Resources </Nav.Link>
-            <Nav.Link href="#action2">Meet-Ups </Nav.Link>
-
-            <NavDropdown title="More" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Help</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">Contact Us</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">About</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Form className="d-flex">
-            <Form.Control
+    <div>
+      <Form className="d-flex justify-content-end" onSubmit={(e) => console.log('clicked')}>
+        <div className="d-flex me-3 mt-3 border rounded">
+          <button type="submit" className="reset-style ms-2" >
+            <img src={search} alt="" className="search mb-0"/>
+          </button>
+          <div>
+            <input
               type="search"
               placeholder="Search"
-              className="me-2"
+              className="border border-0 ms-3 input"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
-          </Form>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+          </div>
+        </div>
+      </Form>
+      <Navbar expand="lg">
+        <Container fluid>
+          <Navbar.Brand href="#">
+            {" "}
+            <img src={logo} alt="" className="size"/>
+          </Navbar.Brand>
+          <Nav
+            className="mt-3 d-flex"
+            style={{ maxHeight: "100px"}}
+            navbarScroll
+          >
+            <Link to={`/`} className="link">
+              <Nav.Link href="#general" className="fs-5">Home</Nav.Link>
+            </Link>
+
+            <Link to={`/jobs`} className="link">
+              <Nav.Link href="#general" className="fs-5">Jobs</Nav.Link>
+            </Link>
+            <Link to={`/`} className="link">
+              <Nav.Link href="#mentors" className="fs-5">Mentorship</Nav.Link>
+            </Link>
+            <Link to={`/`} className="link">
+              <Nav.Link href="#action2" className="fs-5"> Resources </Nav.Link>
+            </Link>
+            <Link to={`/`} className="link">
+              <Nav.Link href="#action2" className="fs-5">Meet-Ups </Nav.Link>
+            </Link>
+
+            
+          </Nav>
+          <NavDropdown title="More" id="navbarScrollingDropdown" className="hamburger">
+              <NavDropdown.Item href="#action3">Help</NavDropdown.Item>
+              <NavDropdown.Item href="#action4">Contact Us</NavDropdown.Item>
+              <NavDropdown.Item href="#action5">About</NavDropdown.Item>
+            </NavDropdown>
+        </Container>
+      </Navbar>
+    </div>
+    
   );
 };
 
