@@ -46,7 +46,7 @@ const Navbvar = () => {
             <Link to={`/jobs`} className="link">
               <Nav.Link href="#general" className="fs-5">Jobs</Nav.Link>
             </Link>
-            <Link to={`/`} className="link">
+            <Link to={`/mentors`} className="link">
               <Nav.Link href="#mentors" className="fs-5">Mentorship</Nav.Link>
             </Link>
             <Link to={`/`} className="link">

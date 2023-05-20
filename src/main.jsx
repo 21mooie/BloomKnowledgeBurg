@@ -8,6 +8,8 @@ import Login from "./Pages/Login";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import Jobs from "./Pages/Jobs";
+import Mentors from "./Pages/Mentors";
+import MentorsCreate from "./Pages/MentorsCreate";
 import ProtectedRoute from "./utils/ProtectedRoutes";
 import GeneralForum from "./Pages/GeneralForum";
 import PostCreate from "./Pages/PostCreate";
@@ -38,7 +40,26 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
-      
+      {
+        path: "/mentors",
+        element: (
+          <ProtectedRoute>
+            <Mentors />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/mentors/create",
+        element: (
+          <ProtectedRoute>
+            <MentorsCreate />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path:'/home',
+        element: <Home/>
+      },
       {
         path: "/signup",
         element: <Signup />,
