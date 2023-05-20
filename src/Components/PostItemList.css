@@ -1,16 +1,16 @@
 #ind-card-post-item {
   margin-left: 10%;
   margin-top: 10px;
-  width: 80%;
+
 }
 
 #left-card {
   padding-top: 20px;
+
 }
 
 #card-title-list-item {
   padding-left: 20px;
-
   text-decoration: none;
   color: black;
 }
@@ -20,3 +20,15 @@
   font-size: 13px;
   padding-left: 20px;
 }
+
+.likes{
+  display: flex;
+  gap: .5rem;
+ justify-content: space-between;
+  padding: .2rem 2rem;
+}
+.icon{
+  width: 20px !important;
+  height: 15px !important;
+}
+
