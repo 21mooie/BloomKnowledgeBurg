@@ -59,6 +59,8 @@ const GeneralForum = () => {
   return (
     <div>
       <ImageCarousel />
+
+      
       <Link to="/post/create">
         <Button id={"btn-create"} variant="outline-success">
           <MdOutlineLibraryAdd /> Create Post
