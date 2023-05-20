@@ -20,13 +20,13 @@ footer{
     width: 20%;
 }
 
-img {
+.img {
     width: 180px;
     height: 200 px;
     border-radius: 10%;
 }
 
-p {
+.p {
     text-align: center;
 }
 
