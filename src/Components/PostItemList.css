@@ -1,0 +1,22 @@
+#ind-card-post-item {
+  margin-left: 10%;
+  margin-top: 10px;
+  width: 80%;
+}
+
+#left-card {
+  padding-top: 20px;
+}
+
+#card-title-list-item {
+  padding-left: 20px;
+
+  text-decoration: none;
+  color: black;
+}
+
+#p-small-info {
+  color: rgba(121, 120, 120, 0.698);
+  font-size: 13px;
+  padding-left: 20px;
+}
