@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import Signup from "./Pages/Signup";
+import Signup from "./Pages/Signup/Signup";
 import Login from "./Pages/Login";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
@@ -11,6 +11,7 @@ import Jobs from "./Pages/Jobs";
 import Mentors from "./Pages/Mentors";
 import ProtectedRoute from "./utils/ProtectedRoutes";
 import GeneralForum from "./Pages/GeneralForum";
+import PostCreate from "./Pages/PostCreate";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <GeneralForum />,
+        element: (
+          <ProtectedRoute>
+            <GeneralForum />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/jobs",
@@ -48,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: "/forum/general",
         element: <GeneralForum />,
+      },
+      {
+        path: "/post/create",
+        element: <PostCreate />,
       },
     ],
   },
