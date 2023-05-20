@@ -6,6 +6,7 @@ import { Button } from "react-bootstrap";
 import { MdOutlineLibraryAdd } from "react-icons/md";
 import { Link } from "react-router-dom";
 
+
 const GeneralForum = () => {
   const [currPageNum, setCurrPageNum] = useState(1);
   const RECORDS_PER_PAGE = 10;
@@ -57,6 +58,7 @@ const GeneralForum = () => {
 
   return (
     <div>
+  
       <Link to="/post/create">
         <Button id={"btn-create"} variant="outline-success">
           <MdOutlineLibraryAdd /> Create Post

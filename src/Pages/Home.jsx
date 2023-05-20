@@ -3,6 +3,7 @@ import Hero from "../Components/Hero/Hero";
 import GeneralForum from "./GeneralForum1";
 import Trending from "../Components/Widgets/Trending";
 import TrendTags from "../Components/Widgets/TrendTags";
+import ImageCarousel from "../Components/ImageCarousel";
 function Home() {
   return (
     <div
@@ -11,14 +12,7 @@ function Home() {
         width: "100vw",
       }}
     >
-      <div
-        className=""
-        style={{
-          height: "50vh",
-        }}
-      >
-        <Hero />
-      </div>
+    <ImageCarousel />
       {/* feed */}
       <div className="feed row ">
         <div className="col-8  px-3">

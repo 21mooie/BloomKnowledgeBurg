@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         path: "/",
         element: (
           <ProtectedRoute>
-            <GeneralForum />
+            <Home />
           </ProtectedRoute>
         ),
       },
@@ -38,10 +38,7 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
-      {
-        path:'/home',
-        element: <Home/>
-      },
+      
       {
         path: "/signup",
         element: <Signup />,
