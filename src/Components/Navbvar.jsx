@@ -7,20 +7,25 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import search from "../assets/search.png";
 import "./Navbvar.css";
 
 const Navbvar = () => {
   return (
     <div>
-      <Form className="d-flex justify-content-end">
-        <div className="d-flex me-3 mt-3">
-          <Form.Control
-            type="search"
-            placeholder="Search"
-            className="me-2"
-            aria-label="Search"
-          />
-          <Button variant="outline-success">Search</Button>
+      <Form className="d-flex justify-content-end" onSubmit={(e) => console.log('clicked')}>
+        <div className="d-flex me-3 mt-3 border rounded">
+          <button type="submit" className="reset-style ms-2" >
+            <img src={search} alt="" className="search mb-0"/>
+          </button>
+          <div>
+            <input
+              type="search"
+              placeholder="Search"
+              className="border border-0 ms-3 input"
+              aria-label="Search"
+            />
+          </div>
         </div>
       </Form>
       <Navbar expand="lg">
@@ -56,7 +61,6 @@ const Navbvar = () => {
           <NavDropdown title="More" id="navbarScrollingDropdown" className="hamburger">
               <NavDropdown.Item href="#action3">Help</NavDropdown.Item>
               <NavDropdown.Item href="#action4">Contact Us</NavDropdown.Item>
-              <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">About</NavDropdown.Item>
             </NavDropdown>
         </Container>

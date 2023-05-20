@@ -19,3 +19,24 @@
 .hamburger {
     width: 150px;
 }
+
+.search {
+    height: 20px;
+}
+
+.input {
+    width: 150px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.reset-style {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
