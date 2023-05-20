@@ -46,7 +46,7 @@ const Navbvar = () => {
             <Link to={`/jobs`} className="link">
               <Nav.Link href="#general" className="fs-5">Jobs</Nav.Link>
             </Link>
-            <Link to={`/mentors`} className="link">
+            <Link to={`/`} className="link">
               <Nav.Link href="#mentors" className="fs-5">Mentorship</Nav.Link>
             </Link>
             <Link to={`/`} className="link">
@@ -55,6 +55,7 @@ const Navbvar = () => {
             <Link to={`/`} className="link">
               <Nav.Link href="#action2" className="fs-5">Meet-Ups </Nav.Link>
             </Link>
+
             
           </Nav>
           <NavDropdown title="More" id="navbarScrollingDropdown" className="hamburger">
