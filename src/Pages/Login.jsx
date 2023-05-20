@@ -21,7 +21,7 @@ function Login() {
     <div className="d-flex justify-content-center align-items-center mt-5 ">
       <form className=" w-50 container shadow p-4 rounded" onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label for="email" className="form-label">
+          <label htmlFor="email" className="form-label">
             Email address
           </label>
           <input
@@ -34,7 +34,7 @@ function Login() {
           />
         </div>
         <div className="mb-3">
-          <label for="password" className="form-label">
+          <label htmlFor="password" className="form-label">
             Password
           </label>
           <input

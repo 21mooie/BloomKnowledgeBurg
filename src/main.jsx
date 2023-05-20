@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import Signup from "./Pages/Signup";
+import Signup from "./Pages/Signup/Signup";
 import Login from "./Pages/Login";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
@@ -18,7 +18,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <GeneralForum />,
+        element: (
+          <ProtectedRoute>
+            <GeneralForum />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/jobs",
