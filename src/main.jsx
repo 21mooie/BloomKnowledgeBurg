@@ -10,6 +10,7 @@ import { store } from "./redux/store";
 import Jobs from "./Pages/Jobs";
 import ProtectedRoute from "./utils/ProtectedRoutes";
 import GeneralForum from "./Pages/GeneralForum";
+import PostCreate from "./Pages/PostCreate";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/forum/general",
         element: <GeneralForum />,
+      },
+      {
+        path: "/post/create",
+        element: <PostCreate />,
       },
     ],
   },
