@@ -1,15 +1,13 @@
 .size {
-    height: 70px;
+    height: 60px;
 }
 
 .nav {
-    display: flex;
-    flex-direction: row;
+    width: 800px
 }
 
 .link {
     text-decoration: none;
-    width: 150px;
 }
 
 .form {

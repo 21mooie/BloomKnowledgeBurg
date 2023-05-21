@@ -3,6 +3,8 @@ import { auth } from "../firebase/firebase.config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import jsCookie from "js-cookie";
+import { Link } from "react-router-dom";
+
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -54,6 +56,11 @@ function Login() {
         <button type="submit" className="btn btn-primary w-100">
           Submit
         </button>
+        <p className="text-muted mt-3">Don't have an account? {" "}
+            <Link to="/signup" className="text-primary">
+                Signup
+            </Link>
+        </p>
       </form>
     </div>
   );
