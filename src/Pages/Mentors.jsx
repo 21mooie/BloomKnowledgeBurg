@@ -18,6 +18,14 @@ function Mentors() {
   const [viewableMentors, setViewableMentors] = useState([]);
   const [selected_data, setData] = useState(null);
   const [show, setShow] = useState(false);
+  const [images, setImages] = useState([
+    "https://www.nippon.com/en/ncommon/contents/japan-topics/562750/562750.jpg",
+    "https://miro.medium.com/v2/resize:fit:1400/0*aram6gZ0RX17PrLp",
+    "https://media.istockphoto.com/id/1180522062/photo/woman-designer-creative-idea-website-designer-draw-outline-and-develop-applications-on.jpg?s=612x612&w=0&k=20&c=EyiFWvUMstW9HuSOJlJqJZBBbmQuh1fUaGtx-0XEUpw=",
+    "https://wearetechwomen.com/wp-content/uploads/2020/10/shutterstock_1538502431.jpg",
+    "https://media.istockphoto.com/id/613696940/photo/getting-to-grips-with-the-world-online.jpg?s=612x612&w=0&k=20&c=YHwFidQMd7RBLGokOj_WlrPqs9IM7jAtrooBMlCCs_s=",
+    "https://t4.ftcdn.net/jpg/05/40/62/43/360_F_540624331_koFaCm57r3X4Vi7wdGmtthrw5oB0H6Ye.jpg"
+  ]);
   const handleShow = (data) => {
     setShow(true);
     setData(data);
@@ -36,6 +44,13 @@ function Mentors() {
       querySnapshot.forEach((doc) => {
         mentors.push({ id: doc.id, data: doc.data() });
       });
+      if (mentors.length > 6){
+        let newImages = [...images];
+        for(let i=images.length; i<mentors.length; i++){
+          newImages.push(mentorjpg);
+        }
+        setImages(newImages);
+      }
       setViewableMentors(mentors);
     }
     if (viewableMentors.length === 0) {
@@ -67,9 +82,14 @@ function Mentors() {
           {viewableMentors.length > 0 &&
             viewableMentors?.map((doc, i) => (
               // <li key={i}><Link to="/mentors">{doc.data.first_name}</Link></li>
-              <Col className="d-flex">
-                <Card className="flex-fill" key={i}>
-                  <Card.Img variant="top" src={mentorjpg} />
+              <Col className="d-flex gy-3" key={i}>
+                <Card className="flex-fill" >
+                  <Card.Img 
+                    variant="top" 
+                    src={images[i]} 
+                    onError={(e) => { e.onerror = null; e.target.src=mentorjpg;}} 
+                    className="image"
+                  />
                   <Card.Body>
                     <Card.Title>
                       {doc.data.first_name} {doc.data.last_name}

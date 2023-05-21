@@ -148,7 +148,7 @@ function Signup() {
         {/* error */}
 
         <p className="text-muted mt-3">
-          Already have an account{" "}
+          Already have an account?{" "}
           <Link to="/login" className="text-primary">
             Login
           </Link>

@@ -35,7 +35,7 @@ const Navbvar = () => {
             <img src={logo} alt="" className="size"/>
           </Navbar.Brand>
           <Nav
-            className="mt-3 d-flex"
+            className="mt-3 d-flex justify-content-between nav"
             style={{ maxHeight: "100px"}}
             navbarScroll
           >
@@ -58,7 +58,7 @@ const Navbvar = () => {
 
             
           </Nav>
-          <NavDropdown title="More" id="navbarScrollingDropdown" className="hamburger">
+          <NavDropdown title="More" id="navbarScrollingDropdown" className="hamburger mt-3">
               <NavDropdown.Item href="#action3">Help</NavDropdown.Item>
               <NavDropdown.Item href="#action4">Contact Us</NavDropdown.Item>
               <NavDropdown.Item href="#action5">About</NavDropdown.Item>

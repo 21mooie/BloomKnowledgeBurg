@@ -10,25 +10,25 @@ const Footer = () => {
   return (
     <footer>
       <div class="footer-container">
-        <div class="Footer-item">
-          <img src={mentorjpg} alt="Become a Mentor"></img>
+        <div className="mt-4">
+          <img src={mentorjpg} alt="Become a Mentor" className="img"></img>
           <p className="p">Become a Mentor</p>
         </div>
-        <div class="Footer-item">
+        <div className="mt-4">
           <img src={submitJPG} alt="Submit Resources" className="img"></img>
           <p className="p">Submit Resources</p>
         </div>
-        <div class="Footer-item">
+        <div className="mt-4">
           <img src={eventsJpg} alt="Share An Event" className="img"></img>
           <p className="p">Share An Event</p>
         </div>
-        <div class="Footer-item">
+        <div className="mt-4">
           <img src={signupjpg} alt="Signup" className="img"></img>
           <p className="p">Sign Up</p>
         </div>
       </div>
       <div class="afterboot">
-        <p className="p">2023 AFTERBOOT</p>
+        <p className="p web-rights">2023 AFTERBOOT</p>
       </div>
     </footer>
   );
