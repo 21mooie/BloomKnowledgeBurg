@@ -60,11 +60,10 @@ const GeneralForum = () => {
     <div>
       <ImageCarousel />
 
-      
       <Link to="/post/create">
         <Button id={"btn-create"} variant="outline-success">
           <MdOutlineLibraryAdd /> Create Post
-        </Button>{" "}
+        </Button>
       </Link>
       <PostItemList currentRecords={currentRecords} />
       <Pagination id="pagination">{paginators}</Pagination>
