@@ -13,7 +13,6 @@ const ImageCarousel = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>Welcome to AfterBoot</h3>
             <p>
               A Supportive And Collaborative Community Delicated To Empowering
               Those Who Have Entered Into The World Of Tech Through
@@ -45,7 +44,6 @@ const ImageCarousel = () => {
           />
 
           <Carousel.Caption>
-            <h3>Welcome to AfterBoot</h3>
             <p>
               A Supportive And Collaborative Community Delicated To Empowering
               Those Who Have Entered Into The World Of Tech Through
